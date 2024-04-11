@@ -18,10 +18,10 @@ return new class extends Migration
             $table->text('thumb');
             $table->string('price',)->nullable();
             $table->string('series', 50);
-            $table->string('sale_date', 50);
-            $table->string('type', 50);
-            $table->text('artists');
-            $table->text('writers');
+            $table->string('sale_date', 50)->nullable();
+            $table->string('type', 50)->nullable();
+            $table->text('artists')->nullable();
+            $table->text('writers')->nullable();
 
             $table->timestamps();
         });

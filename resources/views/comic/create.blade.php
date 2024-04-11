@@ -15,7 +15,7 @@
     </header>
 
     <div class="container py-5">
-        <form action="{{route('comic.store')}}" method="POST">
+        <form class="col-6" action="{{route('comic.store')}}" method="POST">
             @csrf
 
             <div class="mb-3">
@@ -40,17 +40,17 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control" id="description" name="description"></textarea required>
+                <textarea type="text" class="form-control" id="description" name="description" rows="5"></textarea required>
             </div>
 
             <div class="mb-3">
-                <label for="artists" class="form-label">Artisti</label>
-                <textarea type="text" class="form-control" id="artists" name="artists"></textarea required>
+                <label for="artists" class="form-label">Artisti (Not required)</label>
+                <textarea type="text" class="form-control" id="artists" name="artists" rows="5"></textarea>
             </div>
 
             <div class="mb-3">
-                <label for="writers" class="form-label">Scrittori</label>
-                <textarea type="text" class="form-control" id="writers" name="writers"></textarea required>
+                <label for="writers" class="form-label">Scrittori (Not required)</label>
+                <textarea type="text" class="form-control" id="writers" name="writers" rows="5"></textarea>
             </div>
     
             <button type="submit" class="btn btn-primary">Salva</button>
