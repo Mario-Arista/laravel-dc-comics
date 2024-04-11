@@ -3,7 +3,8 @@
 @section('content')
     <header>
         <div class="container py-4">
-            <h1>{{$comic->title}}</h1>
+            <a class="text-decoration-none bg-primary text text-white p-2 fw-bold" href="{{route('comic.index')}}">TORNA INDIETRO</a>
+            <h1 class="mt-3">{{$comic->title}}</h1>
         </div>
         
     </header>
