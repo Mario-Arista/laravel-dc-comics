@@ -1,13 +1,19 @@
 @extends('layouts.app')
 
+@section('title')
+    Laravel Single Comic
+@endsection
+
 @section('content')
     <header>
+
         <div class="container py-4">
-            <a class="text-decoration-none bg-primary text text-white p-2 fw-bold" href="{{route('comic.index')}}">TORNA INDIETRO</a>
+            <a href="{{route('comic.index')}}" class="text-decoration-none bg-primary text text-white p-2 fw-bold">TORNA INDIETRO</a>
             <h1 class="mt-3">{{$comic->title}}</h1>
         </div>
-        
+
     </header>
+    
     <div class="container py-5">
         <div class="d-flex gap-2 p-3">
         
