@@ -8,13 +8,13 @@
     <header>
 
         <div class="container py-4">
-            <a href="{{route('comics.index')}}" class="text-decoration-none bg-primary text text-white p-2 fw-bold">TORNA INDIETRO</a>
-            <h1 class="mt-3">Crea Fumetto:</h1>
+            <a href="{{route('comics.index')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
+            <h1 class="mt-3 text-danger">Crea Fumetto:</h1>
         </div>
 
     </header>
 
-    <div class="container py-5">
+    <div class="container py-5 text-white">
         <form class="col-6" action="{{route('comics.store')}}" method="POST">
             @csrf
 
@@ -53,7 +53,7 @@
                 <textarea type="text" class="form-control" id="writers" name="writers" rows="5"></textarea>
             </div>
     
-            <button type="submit" class="btn btn-primary">Salva</button>
+            <button type="submit" class="btn btn-danger">Salva</button>
 
         </form>
 
