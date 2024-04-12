@@ -8,7 +8,7 @@
     <header>
 
         <div class="container py-4">
-            <a href="{{route('comic.index')}}" class="text-decoration-none bg-primary text text-white p-2 fw-bold">TORNA INDIETRO</a>
+            <a href="{{route('comics.index')}}" class="text-decoration-none bg-primary text text-white p-2 fw-bold">TORNA INDIETRO</a>
             <h1 class="mt-3">{{$comic->title}}</h1>
         </div>
 
