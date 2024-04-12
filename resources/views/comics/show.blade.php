@@ -29,4 +29,8 @@
 
         </div>
     </div>
+    <div class="container py-4 text-center">
+        <a href="{{route('comics.edit', $comic->id)}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3 me-3">MODICA FUMETTO</a>
+        <a href="" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3">ELIMINA FUMETTO</a>
+    </div>
 @endsection
