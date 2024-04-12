@@ -7,7 +7,7 @@
 @section('content')
     <header>
 
-        <div class="container py-4">
+        <div class="container py-4 d-flex justify-content-start align-items-center gap-3">
             <a href="{{route('comics.index')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
             <h1 class="mt-3 text-danger">{{$comic->title}}</h1>
         </div>
@@ -29,8 +29,13 @@
 
         </div>
     </div>
-    <div class="container py-4 text-center">
+    <div class="container py-4 text-center d-flex justify-content-center">
         <a href="{{route('comics.edit', $comic->id)}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3 me-3">MODICA FUMETTO</a>
-        <a href="" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3">ELIMINA FUMETTO</a>
+        <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+            @csrf
+            @method("DELETE")
+
+            <button class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3 border border-0">ELIMINA</button>
+        </form>
     </div>
 @endsection

@@ -7,7 +7,7 @@
 @section('content')
     <header>
 
-        <div class="container py-4">
+        <div class="container py-4 d-flex justify-content-start align-items-center gap-3">
             <a href="{{route('comics.show', $comic->id)}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
             <h1 class="mt-3 text-danger">Modifica Fumetto:</h1>
         </div>

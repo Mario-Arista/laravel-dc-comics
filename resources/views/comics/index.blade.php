@@ -6,9 +6,9 @@
 
 @section('content')
     <header>
-        <div class="container py-4">
-            <h1 class="mb-3 text-danger">Laravel Comics:</h1>
-            <a href="{{route('comics.create')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">CREA FUMETTO</a>
+        <div class="container py-4 d-flex justify-content-between align-items-center">
+            <h1 class="mb-3 text-danger">Laravel Comics</h1>
+            <a href="{{route('comics.create')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3">CREA FUMETTO</a>
         </div>
         
     </header>
