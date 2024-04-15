@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ComicController extends Controller
 {
@@ -30,6 +31,9 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        // Richiamo funzione validation
+        $this->validation($request->all());
+
         $newComic = new Comic();
 
         $newComic->title = $request->title;
@@ -68,6 +72,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // Richiamo funzione validation
+        $this->validation($request->all());
 
         $comic->title = $request->title;
         $comic->description = $request->description;
@@ -90,5 +96,45 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()->route('comics.index');
+    }
+
+    private function validation($data) {
+
+        $validator = Validator::make($data, 
+        [
+            'title' => 'required|max:100',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'nullable',
+            'series' => 'required|max:50',
+
+            // sale_date & type non sono presenti nei dati 
+            // quindi non li richiamo
+            // 'sale_date' => 'nullable|max:50',
+            // 'type' => 'nullable|max:50',
+
+            'artists' => 'nullable',
+            'writers' => 'nullable'
+        ],
+        [
+            // Per price, artists, writers
+            // Non inserisco specifiche perchè nullable
+
+            // Per title
+            'title.required' => 'Il titolo deve essere inserito, è obbligatorio!',
+            'title.max' => 'Il titolo deve avere massimo :max caratteri',
+
+            // Per description
+            'description.required' => 'La descrizione deve essere inserita, è obbligatoria!',
+
+            // Per thumb
+            'thumb.required' => "Il link dell'immagine del fumetto deve essere inserito, è obbligatorio!",
+            
+            // Per series
+            'series.required' => "La serie del fumetto deve essere inserita, è obbligatoria!",
+            'series.max' => 'La serie deve avere massimo :max caratteri',
+
+        ])->validate();
+
     }
 }
