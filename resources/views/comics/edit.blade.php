@@ -21,7 +21,7 @@
 
             <div class="mb-3">
               <label for="title" class="form-label">Nome</label>
-              <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') ?? $comic->title }}">
+              <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') ?? $comic->title }}" required>
               @error('title')
               <div class="invalid-feedback">
                 {{$message}}
@@ -31,7 +31,7 @@
     
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{ old('series') ?? $comic->series }}">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{ old('series') ?? $comic->series }}" required>
                 @error('series')
                 <div class="invalid-feedback">
                   {{$message}}
@@ -41,7 +41,7 @@
     
             <div class="mb-3">
                 <label for="thumb" class="form-label">Src immagine</label>
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{ old('thumb') ?? $comic->thumb }}">
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{ old('thumb') ?? $comic->thumb }}" required>
                 @error('thumb')
                 <div class="invalid-feedback">
                   {{$message}}
@@ -61,7 +61,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="5">{{ old('description') ?? $comic->description }}</textarea>
+                <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="5" required>{{ old('description') ?? $comic->description }}</textarea>
                 @error('description')
                 <div class="invalid-feedback">
                   {{$message}}

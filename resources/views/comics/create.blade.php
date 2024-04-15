@@ -20,7 +20,7 @@
 
             <div class="mb-3">
               <label for="title" class="form-label">Nome</label>
-              <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}">
+              <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}" required>
               @error('title')
               <div class="invalid-feedback">
                 {{$message}}
@@ -30,7 +30,7 @@
     
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{ old('series') }}">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{ old('series') }}" required>
                 @error('series')
                 <div class="invalid-feedback">
                   {{$message}}
@@ -40,7 +40,7 @@
     
             <div class="mb-3">
                 <label for="thumb" class="form-label">Src immagine</label>
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{ old('thumb') }}">
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{ old('thumb') }}" required>
                 @error('thumb')
                 <div class="invalid-feedback">
                   {{$message}}
@@ -60,7 +60,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="5">{{ old('description') }}</textarea>
+                <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="5" required>{{ old('description') }}</textarea>
                 @error('description')
                 <div class="invalid-feedback">
                   {{$message}}
