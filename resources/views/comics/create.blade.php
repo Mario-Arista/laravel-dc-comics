@@ -20,17 +20,17 @@
 
             <div class="mb-3">
               <label for="title" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="title" name="title" required>
+              <input type="text" class="form-control" id="title" name="title">
             </div>
     
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control" id="series" name="series" required>
+                <input type="text" class="form-control" id="series" name="series">
             </div>
     
             <div class="mb-3">
                 <label for="thumb" class="form-label">Src immagine</label>
-                <input type="text" class="form-control" id="thumb" name="thumb" required>
+                <input type="text" class="form-control" id="thumb" name="thumb">
             </div>
     
             <div class="mb-3">
@@ -40,7 +40,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control" id="description" name="description" rows="5"></textarea required>
+                <textarea type="text" class="form-control" id="description" name="description" rows="5"></textarea>
             </div>
 
             <div class="mb-3">

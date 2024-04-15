@@ -21,17 +21,17 @@
 
             <div class="mb-3">
               <label for="title" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}" required>
+              <input type="text" class="form-control" id="title" name="title" value="{{ $comic->title }}">
             </div>
     
             <div class="mb-3">
                 <label for="series" class="form-label">Serie</label>
-                <input type="text" class="form-control" id="series" name="series" value="{{ $comic->series }}" required>
+                <input type="text" class="form-control" id="series" name="series" value="{{ $comic->series }}">
             </div>
     
             <div class="mb-3">
                 <label for="thumb" class="form-label">Src immagine</label>
-                <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}" required>
+                <input type="text" class="form-control" id="thumb" name="thumb" value="{{ $comic->thumb }}">
             </div>
     
             <div class="mb-3">
@@ -41,7 +41,7 @@
 
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
-                <textarea type="text" class="form-control" id="description" name="description" rows="5">{{ $comic->description }}</textarea required>
+                <textarea type="text" class="form-control" id="description" name="description" rows="5">{{ $comic->description }}</textarea>
             </div>
 
             <div class="mb-3">
