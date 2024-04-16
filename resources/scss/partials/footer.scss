@@ -1,0 +1,211 @@
+// Sezione con icone
+
+#app-features {
+    background-color: $primary;
+    color: white;
+    width: 100%;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 65px;
+      padding-top: 45px;
+      padding-bottom: 45px;
+
+      
+        .single-feature {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 50px;
+
+            img {
+              height: 100%;
+              max-width: 50px;
+              
+            }
+
+          }
+
+          h3 {
+            font-size: 0.8em;
+          }
+
+        }
+    }
+}
+
+
+// TOP FOOTER
+
+#top-footer {
+
+
+    width: 100%;
+    
+  
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        padding-bottom: 40px;
+        padding-top: 40px;
+
+        overflow: hidden;
+
+        #link-row {
+
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+
+            #link-row-first {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h3 {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                }
+
+                ul {
+
+                    padding: 0px;
+
+                    li {
+                        list-style-type: none;
+                        font-size: 0.7em;
+                        color: #959595;
+                        padding-bottom: 8px;
+                    }
+
+                }
+
+            }
+        }
+
+        #link-row-second {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+
+            h3 {
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                padding-bottom: 20px;
+            }
+
+            ul {
+
+                padding: 0px;
+
+                li {
+                    list-style-type: none;
+                    font-size: 0.7em;
+                    color: #959595;
+                    padding-bottom: 8px;
+                }
+            }
+
+        }
+
+        #img-row {
+
+            position: absolute;
+            right: 0px;
+            top: -40px;
+            width: 600px;
+
+            img {
+
+                width: 100%;
+            
+            }
+
+        }
+        .fake-paragraph {
+
+            div {
+                font-size: 0.7em;
+                color: #959595;
+
+                a {
+                    color: $primary;
+                    text-decoration: none;
+                }
+            }
+
+            .link-cookies {
+                font-size: 0.7em;
+                color: $primary;
+                text-decoration: none;
+            }
+            
+        }
+    }
+}
+
+#bottom-footer {
+
+    width: 100%;
+  
+    background-color: #303030;
+  
+    padding-top: 25px;
+    padding-bottom: 25px;
+     
+    .container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+  
+        button {
+            background-color: transparent;
+            color: white;
+  
+            padding: 12px;
+  
+            border: $primary 1px solid;
+  
+            font-size: 1em;
+            font-weight: bold;
+        }
+  
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+    
+            span {
+                color: $primary;
+                font-weight: bold;
+                font-size: 1.1em;
+    
+            }
+        }
+    }
+  
+}
+
+
+  

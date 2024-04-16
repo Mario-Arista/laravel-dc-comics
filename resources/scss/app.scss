@@ -1,2 +1,8 @@
+@use './partials/variables' as *;
+
 /*resources/scss/app.scss*/
 @import "~bootstrap/scss/bootstrap";
+
+// Import partziali CSS
+@import './partials/header';
+@import './partials/footer';

@@ -13,7 +13,11 @@
 
 <body class="bg-dark">
 
+    @include('partials/header')
+
     @yield('content')
+
+    @include('partials/footer')
     
 </body>
 </html>
