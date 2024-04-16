@@ -12,7 +12,7 @@
             </a>
 
             <ul>
-                <li>
+                <li class="active">
                     <a class="text-decoration-none text-dark" href="{{route('comics.index')}}">Home</a>
                 </li>
                 <li>Movies</li>

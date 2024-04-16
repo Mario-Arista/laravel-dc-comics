@@ -13,8 +13,9 @@
         </div>
 
     </header>
-
-    <div class="container py-5 text-white">
+    
+    <main class="bg-dark">
+      <div class="container py-5 text-white">
         <form class="col-6" action="{{route('comics.update', $comic->id)}}" method="POST">
             @csrf
             @method('PUT')
@@ -93,5 +94,8 @@
 
         </form>
 
-    </div>
+      </div>
+
+    </main>
+
 @endsection
