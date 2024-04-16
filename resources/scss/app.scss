@@ -108,3 +108,42 @@ main {
 
 }
 
+
+// COMIC SHOW
+
+#bg-main {
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 400px;
+}
+
+.bg-blue {
+    background-color: $primary;
+    width: 100%;
+    height: 80px;
+
+    .container {
+        position: relative;
+
+    }
+
+    .gallery-cont {
+        position: absolute;
+        left: 0px;
+        bottom: -40px;
+
+        width: 190px;
+
+        .img-gallery {
+            width: 100%;
+        }
+
+    }
+}
+
+.blue-cta {
+    background-color: $primary;
+}
+

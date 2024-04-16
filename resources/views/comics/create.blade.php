@@ -5,15 +5,8 @@
 @endsection
 
 @section('content')
-    <header>
 
-        <div class="container py-4 d-flex justify-content-start align-items-center gap-3">
-            <a href="{{route('comics.index')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
-            <h1 class="m-0 text-danger">Crea Fumetto</h1>
-        </div>
-
-    </header>
-
+  <main>
     <div class="container py-5 text-white">
         <form class="col-6" action="{{route('comics.store')}}" method="POST">
             @csrf
@@ -88,9 +81,10 @@
                 @enderror
             </div>
     
-            <button type="submit" class="btn btn-danger">Salva</button>
+            <button type="submit" class="btn blue-cta text-white">Salva</button>
 
         </form>
 
     </div>
+  </main>
 @endsection

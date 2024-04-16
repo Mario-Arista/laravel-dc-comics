@@ -5,38 +5,47 @@
 @endsection
 
 @section('content')
-    <header>
 
-        <div class="container py-4 d-flex justify-content-start align-items-center gap-3">
-            <a href="{{route('comics.index')}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
-            <h1 class="m-0 text-danger">{{$comic->title}}</h1>
-        </div>
+    <main>
 
-    </header>
+        <div id="bg-main"></div>
     
-    <div class="container py-5">
-        <div class="d-flex gap-2 p-3 text-white">
-        
-            <img src="{{$comic->thumb}}" alt="{{$comic->title}}" style="max-height: 300px;">
-            <div>
-                <div class="p-1"><strong class="text-danger">Serie: </strong>{{$comic->series}}</div>
-                <div class="p-1"><strong class="text-danger">Prezzo: </strong>{{$comic->price}}</div>
-                <div class="p-1"><strong class="text-danger">Descrizione: </strong>{{$comic->description}}</div>
-                <div class="p-1"><strong class="text-danger">Aristi: </strong>{{$comic->artists}}</div>
-                <div class="p-1"><strong class="text-danger">Scrittori: </strong>{{$comic->writers}}</div>
+        <div class="bg-blue">
+            <div class="container">
+                <div class="gallery-cont">
+                    <img class="img-gallery" src="{{$comic->thumb}}" alt="{{$comic->title}}">
+                </div>
             </div>
 
-
         </div>
-    </div>
-    <div class="container py-4 text-center d-flex justify-content-center">
 
-        <a href="{{route('comics.edit', $comic->id)}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold p-3 me-3">MODICA FUMETTO</a>
-        <button type="button" class="btn bg-danger text text-white p-2 fw-bold p-3 me-3 border border-0 rounded-0" data-bs-toggle="modal" data-bs-target="#deleteModal">ELIMINA</button>
+        <div class="container py-5">
+    
+            <div class="d-flex align-items-center gap-2 p-3 text-white">
+            
+                <img src="{{$comic->thumb}}" alt="{{$comic->title}}" style="max-height: 300px;">
 
-    </div>
+                <div>
+                    <div class="p-1"><strong>Titolo: </strong>{{$comic->title}}</div>
+                    <div class="p-1"><strong>Serie: </strong>{{$comic->series}}</div>
+                    <div class="p-1"><strong>Prezzo: </strong>{{$comic->price}}</div>
+                    <div class="p-1"><strong>Descrizione: </strong>{{$comic->description}}</div>
+                    <div class="p-1"><strong>Aristi: </strong>{{$comic->artists}}</div>
+                    <div class="p-1"><strong>Scrittori: </strong>{{$comic->writers}}</div>
+                </div>
+    
+    
+            </div>
+        </div>
 
+        <div class="container py-4 text-center d-flex justify-content-center">
 
+            <a href="{{route('comics.edit', $comic->id)}}" class="blue-cta text-decoration-none text text-white p-2 fw-bold p-3 me-3">MODICA FUMETTO</a>
+            <button type="button" class="btn blue-cta text text-white p-2 fw-bold p-3 me-3 border border-0 rounded-0" data-bs-toggle="modal" data-bs-target="#deleteModal">ELIMINA</button>
+    
+        </div>
+
+    </main>
 
     <!-- MODALE BOOTSTRAP -->
 
@@ -61,7 +70,7 @@
                     @csrf
                     @method("DELETE")
         
-                    <button class="bg-danger text text-white p-2 fw-bold p-3 border border-0">ELIMINA</button>
+                    <button class="blue-cta text text-white p-2 fw-bold p-3 border border-0">ELIMINA</button>
                 </form>
 
             </div>

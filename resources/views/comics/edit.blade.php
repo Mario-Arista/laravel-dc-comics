@@ -5,16 +5,20 @@
 @endsection
 
 @section('content')
-    <header>
 
-        <div class="container py-4 d-flex justify-content-start align-items-center gap-3">
-            <a href="{{route('comics.show', $comic->id)}}" class="text-decoration-none bg-danger text text-white p-2 fw-bold">TORNA INDIETRO</a>
-            <h1 class="m-0 text-danger">Modifica Fumetto:</h1>
-        </div>
-
-    </header>
-    
     <main class="bg-dark">
+
+      <div id="bg-main"></div>
+    
+      <div class="bg-blue">
+          <div class="container">
+              <div class="gallery-cont">
+                  <img class="img-gallery" src="{{$comic->thumb}}" alt="{{$comic->title}}">
+              </div>
+          </div>
+
+      </div>
+
       <div class="container py-5 text-white">
         <form class="col-6" action="{{route('comics.update', $comic->id)}}" method="POST">
             @csrf
@@ -90,7 +94,7 @@
                 @enderror
             </div>
     
-            <button type="submit" class="btn btn-danger">Modifca</button>
+            <button type="submit" class="btn blue-cta text-white">MODIFICA</button>
 
         </form>
 
