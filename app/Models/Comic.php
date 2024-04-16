@@ -11,4 +11,7 @@ class Comic extends Model
     use HasFactory;
 
     use SoftDeletes;
+
+    protected $fillable = ['title', 'description', 'series', 'thumb', 'price', 'artists', 'writers' ];
+
 }

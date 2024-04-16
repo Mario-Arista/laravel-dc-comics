@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -29,20 +30,22 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        // Richiamo funzione validation
-        $this->validation($request->all());
+        $request->validated();
 
         $newComic = new Comic();
 
-        $newComic->title = $request->title;
-        $newComic->description = $request->description;
-        $newComic->series = $request->series;
-        $newComic->thumb = $request->thumb;
-        $newComic->price = $request->price;
-        $newComic->artists = $request->artists;
-        $newComic->writers = $request->writers;
+        $newComic->fill($request->all());
+
+        // Compilazione pre fillable:
+        // $newComic->title = $request->title;
+        // $newComic->description = $request->description;
+        // $newComic->series = $request->series;
+        // $newComic->thumb = $request->thumb;
+        // $newComic->price = $request->price;
+        // $newComic->artists = $request->artists;
+        // $newComic->writers = $request->writers;
 
         $newComic->save();
 
@@ -70,18 +73,20 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    public function update(StoreComicRequest $request, Comic $comic)
     {
-        // Richiamo funzione validation
-        $this->validation($request->all());
+        $request->validated();
 
-        $comic->title = $request->title;
-        $comic->description = $request->description;
-        $comic->series = $request->series;
-        $comic->thumb = $request->thumb;
-        $comic->price = $request->price;
-        $comic->artists = $request->artists;
-        $comic->writers = $request->writers;
+        $comic->fill($request->all());
+
+        // Compilazione pre fillable:
+        // $comic->title = $request->title;
+        // $comic->description = $request->description;
+        // $comic->series = $request->series;
+        // $comic->thumb = $request->thumb;
+        // $comic->price = $request->price;
+        // $comic->artists = $request->artists;
+        // $comic->writers = $request->writers;
 
         $comic->save();
 
@@ -96,45 +101,5 @@ class ComicController extends Controller
         $comic->delete();
 
         return redirect()->route('comics.index');
-    }
-
-    private function validation($data) {
-
-        $validator = Validator::make($data, 
-        [
-            'title' => 'required|max:100',
-            'description' => 'required',
-            'thumb' => 'required',
-            'price' => 'nullable',
-            'series' => 'required|max:50',
-
-            // sale_date & type non sono presenti nei dati 
-            // quindi non li richiamo
-            // 'sale_date' => 'nullable|max:50',
-            // 'type' => 'nullable|max:50',
-
-            'artists' => 'nullable',
-            'writers' => 'nullable'
-        ],
-        [
-            // Per price, artists, writers
-            // Non inserisco specifiche perchè nullable
-
-            // Per title
-            'title.required' => 'Il titolo deve essere inserito, è obbligatorio!',
-            'title.max' => 'Il titolo deve avere massimo :max caratteri',
-
-            // Per description
-            'description.required' => 'La descrizione deve essere inserita, è obbligatoria!',
-
-            // Per thumb
-            'thumb.required' => "Il link dell'immagine del fumetto deve essere inserito, è obbligatorio!",
-            
-            // Per series
-            'series.required' => "La serie del fumetto deve essere inserita, è obbligatoria!",
-            'series.max' => 'La serie deve avere massimo :max caratteri',
-
-        ])->validate();
-
     }
 }
