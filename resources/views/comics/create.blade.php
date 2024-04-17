@@ -81,7 +81,7 @@
                 @enderror
             </div>
     
-            <button type="submit" class="btn blue-cta text-white">Salva</button>
+            <button type="submit" class="btn create-cta text-white">Salva</button>
 
         </form>
 
