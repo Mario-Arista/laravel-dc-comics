@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Laravel Modific Comic
+    Modifica del fumetto
 @endsection
 
 @section('content')

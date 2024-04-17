@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Laravel Create Comic
+    Creazione di un fumetto
 @endsection
 
 @section('content')

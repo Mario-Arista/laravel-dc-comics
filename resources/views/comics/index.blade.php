@@ -1,7 +1,7 @@
 @extends('layouts/app')
 
 @section('title')
-    Laravel Comics
+    DC Comics
 @endsection
 
 @section('content')

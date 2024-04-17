@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Laravel Single Comic
+    {{$comic->title}}
 @endsection
 
 @section('content')
