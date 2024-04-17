@@ -143,7 +143,20 @@ main {
     }
 }
 
+
 .blue-cta {
+    background-color: $primary;
+}
+
+.edit-cta {
+
+    padding: 10px 26px;
+
+    border: $primary 1px solid;
+
+    text-transform: uppercase;
+    font-size: bold;
+
     background-color: $primary;
     
 }

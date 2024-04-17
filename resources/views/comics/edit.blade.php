@@ -12,9 +12,9 @@
     
       <div class="bg-blue">
           <div class="container">
-              <div class="gallery-cont">
+              <a href="{{route('comics.show', $comic->id)}}" class="gallery-cont">
                   <img class="img-gallery" src="{{$comic->thumb}}" alt="{{$comic->title}}">
-              </div>
+              </a>
           </div>
 
       </div>
@@ -94,7 +94,7 @@
                 @enderror
             </div>
     
-            <button type="submit" class="btn blue-cta text-white">MODIFICA</button>
+            <button type="submit" class="btn edit-cta text-white">MODIFICA</button>
 
         </form>
 
